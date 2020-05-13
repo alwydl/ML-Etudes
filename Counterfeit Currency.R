@@ -51,7 +51,7 @@ table(banknote$Status[-train], predc, dnn=c("observed Class","Predicted Class"))
 
 # Step 5 - improvinf Model Performance
 # we use the package tree
-fit <- tree::tree(Status ~ . , data = banknote[train, ], split = "deviance")
+fit <- tree::tree(Status ~ ., data = banknote[train, ], split = "deviance")
 
 # Viewing the decision tree 
 plot(fit)
